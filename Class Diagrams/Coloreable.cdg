@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Coloreable">
+  <ClassDiagramComponents>
+    <Interface name="Coloreable" package="" visibility="public" xPosition="261.0" yPosition="129.0">
+      <Methods>
+        <Method name="cambiaColor" returnType="String" visibility="public">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="Color" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="Figura" package="" visibility="public" isAbstract="true" xPosition="189.0" yPosition="270.0">
+      <Fields>
+        <Field name="color" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="dibujar" returnType="void" visibility="public"/>
+        <Method name="borrar" returnType="void" visibility="public"/>
+        <Method name="cambiaColor" returnType="String" visibility="public">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="Color" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Triangulo" package="" visibility="public" xPosition="507.0" yPosition="511.0">
+      <Fields>
+        <Field name="color" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Color" returnType="void" visibility="public"/>
+        <Method name="cambiaColor" returnType="String" visibility="public">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="dibujar" returnType="void" visibility="public"/>
+        <Method name="borrar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cuadrado" package="" visibility="public" xPosition="276.0" yPosition="540.0">
+      <Fields>
+        <Field name="color" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cambiaColor" returnType="String" visibility="public">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="Color" returnType="void" visibility="public"/>
+        <Method name="borrar" returnType="void" visibility="public"/>
+        <Method name="dibujar" returnType="void" visibility="public"/>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="" visibility="public" xPosition="33.0" yPosition="529.0">
+      <Fields>
+        <Field name="color" type="string" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Color" returnType="void" visibility="public"/>
+        <Method name="cambiaColor" returnType="String" visibility="public">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="dibujar" returnType="void" visibility="public"/>
+        <Method name="borrar" returnType="void" visibility="public"/>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pzarra" package="" visibility="public" xPosition="492.0" yPosition="270.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Cuadrado" target="Figura"/>
+    <HasRelation name="agrega" source="Figura" target="Pzarra" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="Triangulo" target="Figura"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Figura" target="Coloreable"/>
+    <IsRelation name="is" source="Circulo" target="Figura"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
